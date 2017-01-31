@@ -1,16 +1,13 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It is a breeze. Simply tell Lumen the URIs it should respond to
-| and give it the Closure to call when that URI is requested.
-|
-*/
+// Api route group
+$app->group(['prefix' => 'cotacao', 'namespace' => 'Api'], function() use ($app) {
 
-$app->get('/', function () use ($app) {
-    return $app->version();
+    $app->get('/', [
+        'as' => 'api.all', 'uses' => 'RateController@all'
+    ]);
+
+    $app->get('/listar', [
+        'as' => 'api.list', 'uses' => 'RateController@list'
+    ]);
 });

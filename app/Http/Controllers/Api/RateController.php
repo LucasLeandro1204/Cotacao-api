@@ -34,6 +34,6 @@ class RateController extends Controller
      */
     public function list(Request $request)
     {
-        return response()->json('Todas as moedas');
+        return response()->json('Somente as moedas solicitadas');
     }
 }
