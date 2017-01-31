@@ -17,4 +17,23 @@ class RateController extends Controller
 
     }
 
+    /**
+     * Return all
+     *
+     * @return response
+     */
+    public function all()
+    {
+        return response()->json('Todas as moedas');
+    }
+
+    /**
+     * Return requested
+     *
+     * @return response
+     */
+    public function all(Request $request)
+    {
+        return response()->json('Todas as moedas');
+    }
 }
