@@ -4,7 +4,7 @@
 $app->group(['prefix' => 'cotacao', 'namespace' => 'Api'], function() use ($app) {
 
     $app->get('/', [
-        'as' => 'api.all', 'uses' => 'RateController@all'
+        'as' => 'api.index', 'uses' => 'RateController@index'
     ]);
 
     $app->get('/listar', [

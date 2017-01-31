@@ -22,7 +22,7 @@ class RateController extends Controller
      *
      * @return response
      */
-    public function all()
+    public function index()
     {
         return response()->json('Todas as moedas');
     }
