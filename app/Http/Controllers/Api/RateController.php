@@ -32,7 +32,7 @@ class RateController extends Controller
      *
      * @return response
      */
-    public function all(Request $request)
+    public function list(Request $request)
     {
         return response()->json('Todas as moedas');
     }
