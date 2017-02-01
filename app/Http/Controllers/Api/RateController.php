@@ -28,11 +28,11 @@ class RateController extends Controller
     }
 
     /**
-     * Return requested
+     * Return requested coins
      *
      * @return response
      */
-    public function list(Request $request)
+    public function list()
     {
         return response()->json('Somente as moedas solicitadas');
     }
