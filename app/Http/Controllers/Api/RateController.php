@@ -30,7 +30,7 @@ class RateController extends Controller
     /**
      * Return requested coins
      *
-     * @param  string $coins
+     * @param  string  $coins
      * @return response
      */
     public function list($coins)
