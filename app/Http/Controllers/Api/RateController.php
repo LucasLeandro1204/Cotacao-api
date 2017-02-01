@@ -2,19 +2,22 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Rate;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class RateController extends Controller
 {
+    protected $rate;
+
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Rate $rate)
     {
-
+        $this->rate = $rate;
     }
 
     /**
@@ -35,6 +38,6 @@ class RateController extends Controller
      */
     public function list($coins)
     {
-        return response()->json('Somente as moedas solicitadas');
+        return response()->json($this->rate->get());
     }
 }
