@@ -41,4 +41,26 @@ class Rate extends Model
     {
         return format($value);
     }
+
+    /**
+     * Set the buy price
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function setBuyAttribute($value)
+    {
+        $this->attributes['buy'] = format($value, true);
+    }
+
+    /**
+     * Set the sell price
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function setSellAttribute($value)
+    {
+        $this->attributes['sell'] = format($value, true);
+    }
 }
