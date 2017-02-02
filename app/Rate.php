@@ -19,4 +19,26 @@ class Rate extends Model
      * @var array
      */
     protected $fillable = ['type', 'initials', 'buy', 'sell'];
+
+    /**
+     * Get the buy price
+     *
+     * @param  int  $value
+     * @return float
+     */
+    public function getBuyAttribute($value)
+    {
+        return format($value);
+    }
+
+    /**
+     * Get the sell price
+     *
+     * @param  int  $value
+     * @return float
+     */
+    public function getSellAttribute($value)
+    {
+        return format($value);
+    }
 }
