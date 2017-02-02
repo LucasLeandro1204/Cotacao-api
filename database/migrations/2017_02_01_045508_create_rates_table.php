@@ -17,8 +17,8 @@ class CreateRatesTable extends Migration
             $table->increments('id');
             $table->char('type', 1);
             $table->char('initials', 3);
-            $table->float('buy', 9, 4);
-            $table->float('sell', 9, 4);
+            $table->integer('buy');
+            $table->integer('sell');
             $table->timestamps();
         });
     }
