@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Rate;
+use Validator;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -38,6 +39,8 @@ class RateController extends Controller
      */
     public function list($coins)
     {
+        $exploded = explode(';', strtoupper($coins));
+
         return response()->json($this->rate->get());
     }
 }
