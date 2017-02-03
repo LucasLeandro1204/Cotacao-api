@@ -39,8 +39,20 @@ class RateController extends Controller
      */
     public function list($coins)
     {
-        $exploded = explode(';', strtoupper($coins));
+        $eCoins = explode(';', strtoupper($coins));
 
-        return response()->json($this->rate->get());
+        $messages = [
+            'size' => 'As iniciais devem ter exatamente :size letras',
+        ];
+
+        $validator = Validator::make(['coins' => $eCoins], [
+            'coins.*' => 'required|size:3',
+        ], $messages);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors()->add('status', false), 422);
+        }
+
+        return response()->json($this->rate->findOrFail($eCoins));
     }
 }
