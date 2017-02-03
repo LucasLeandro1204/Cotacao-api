@@ -21,6 +21,20 @@ class Rate extends Model
     protected $fillable = ['type', 'initials', 'buy', 'sell'];
 
     /**
+     * Change Primary Key
+     *
+     * @var string
+     */
+    protected $primaryKey = 'initials';
+
+    /**
+     * Set incrementing as false
+     *
+     * @var bool
+     */
+    public $incrementing = false;
+
+    /**
      * Get the buy price
      *
      * @param  int  $value
