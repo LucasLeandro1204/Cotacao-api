@@ -59,12 +59,37 @@ class RateController extends Controller
      * @param  string  $date
      * @return void
      */
-    public function getCSV($date = 20161223)
+    public function getCSV($date = '20161223')
     {
         $csv = @file_get_contents('http://www4.bcb.gov.br/Download/fechamento/'.$date.'.csv');
 
         if ($csv) {
             $this->clean($csv);
+        }
+    }
+
+    /**
+     * Clean csv and insert or update
+     *
+     * @param  string  $csv
+     * @return void
+     */
+    public function clean($csv)
+    {
+        $split = preg_split('/\r\n/', $csv);
+        array_pop($split); // remove because it's empty
+
+        foreach ($split as $key => $values) {
+            $value = explode(';', $values);
+
+            $this->rate->updateOrCreate(
+                ['initials' => $value[3]],
+                [
+                    'type' => $value[2],
+                    'buy' => $value[4],
+                    'sell' => $value[5],
+                ]
+            );
         }
     }
 }
