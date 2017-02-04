@@ -52,4 +52,18 @@ class RateController extends Controller
 
         return response()->json($this->rate->findOrFail($eCoins));
     }
+
+    /**
+     * Get csv
+     */
+    public function getCSV($date = 20161223)
+    {
+        $csv = @file_get_contents('http://www4.bcb.gov.br/Download/fechamento/'.$date.'.csv');
+
+        if ($csv) {
+            $this->clean($csv);
+        }
+
+        return false;
+    }
 }
