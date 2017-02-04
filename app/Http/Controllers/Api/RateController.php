@@ -41,13 +41,10 @@ class RateController extends Controller
     {
         $eCoins = explode(';', strtoupper($coins));
 
-        $messages = [
-            'size' => 'As iniciais devem ter exatamente :size letras',
-        ];
-
-        $validator = Validator::make(['coins' => $eCoins], [
-            'coins.*' => 'required|size:3',
-        ], $messages);
+        $validator = Validator::make(['coins' => $eCoins],
+            ['coins.*' => 'required|size:3',],
+            ['size' => 'As iniciais devem ter exatamente :size letras',]
+        );
 
         if ($validator->fails()) {
             return response()->json($validator->errors()->add('status', false), 422);
