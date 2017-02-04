@@ -55,6 +55,8 @@ class CleanCsv extends Command
 
         $this->info('Inserting data into Rates table');
 
+        $progress = $this->output->createProgressBar(count($split));
+
         foreach ($split as $key => $values) {
             $value = explode(';', $values);
 
@@ -66,8 +68,12 @@ class CleanCsv extends Command
                     'sell' => $value[5],
                 ]
             );
+
+            $progress->advance();
         }
 
-        $this->info('Finished!');
+        $progress->finish();
+
+        $this->info("\n" . 'Finished!');
     }
 }
