@@ -37,6 +37,15 @@ class CleanCsv extends Command
      */
     public function handle()
     {
-        //
+        $this->info('Getting csv');
+
+        $date = date('Ymd');
+        $csv = @file_get_contents('http://www4.bcb.gov.br/Download/fechamento/'.$date.'.csv');
+
+        if (!$csv) {
+            $this->error("Today's date does not have records associated!");
+            return;
+        }
+
     }
 }

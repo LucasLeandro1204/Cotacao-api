@@ -54,21 +54,6 @@ class RateController extends Controller
     }
 
     /**
-     * Get csv
-     *
-     * @param  string  $date
-     * @return void
-     */
-    public function getCSV($date = '20161223')
-    {
-        $csv = @file_get_contents('http://www4.bcb.gov.br/Download/fechamento/'.$date.'.csv');
-
-        if ($csv) {
-            $this->clean($csv);
-        }
-    }
-
-    /**
      * Clean csv and insert or update
      *
      * @param  string  $csv
