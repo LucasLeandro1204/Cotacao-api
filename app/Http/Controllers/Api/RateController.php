@@ -28,7 +28,7 @@ class RateController extends Controller
      */
     public function index()
     {
-        return response()->json('Todas as moedas');
+        return response()->json($this->rate->get());
     }
 
     /**
@@ -55,6 +55,9 @@ class RateController extends Controller
 
     /**
      * Get csv
+     *
+     * @param  string  $date
+     * @return void
      */
     public function getCSV($date = 20161223)
     {
@@ -63,7 +66,5 @@ class RateController extends Controller
         if ($csv) {
             $this->clean($csv);
         }
-
-        return false;
     }
 }
