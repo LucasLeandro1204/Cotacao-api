@@ -52,29 +52,4 @@ class RateController extends Controller
 
         return response()->json($this->rate->findOrFail($eCoins));
     }
-
-    /**
-     * Clean csv and insert or update
-     *
-     * @param  string  $csv
-     * @return void
-     */
-    public function clean($csv)
-    {
-        $split = preg_split('/\r\n/', $csv);
-        array_pop($split); // remove because it's empty
-
-        foreach ($split as $key => $values) {
-            $value = explode(';', $values);
-
-            $this->rate->updateOrCreate(
-                ['initials' => $value[3]],
-                [
-                    'type' => $value[2],
-                    'buy' => $value[4],
-                    'sell' => $value[5],
-                ]
-            );
-        }
-    }
 }

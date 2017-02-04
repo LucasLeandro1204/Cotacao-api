@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Rate;
 use Illuminate\Console\Command;
 
 class CleanCsv extends Command
@@ -47,5 +48,26 @@ class CleanCsv extends Command
             return;
         }
 
+        $this->info('Cleaning the csv');
+
+        $split = preg_split('/\r\n/', $csv);
+        array_pop($split);
+
+        $this->info('Inserting data into Rates table');
+
+        foreach ($split as $key => $values) {
+            $value = explode(';', $values);
+
+            Rate::updateOrCreate(
+                ['initials' => $value[3]],
+                [
+                    'type' => $value[2],
+                    'buy' => $value[4],
+                    'sell' => $value[5],
+                ]
+            );
+        }
+
+        $this->info('Finished!');
     }
 }
