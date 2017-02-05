@@ -1,16 +1,44 @@
 # API Cotações
 
-Api desenvolvida usando os dados cedidos pelo Banco Central, atualizados todo dia útil, exceto feriados.
+API desenvolvida com o Lumen, usando os dados cedidos pelo Banco Central, atualizados todo dia útil, exceto feriados.
 
-# Lumen PHP Framework
+## Lumen PHP Framework
+[Documentação](https://lumen.laravel.com/docs/5.4)
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+## Como usar
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+### Listar todas as moedas
+Faça um requisição **GET** para
+
+    http://link.com.br/cotacao/
+
+### Listar uma ou mais moedas
+Faça uma requisição **GET**, especificando as moedas como parâmetro, separadas por **;**.
+
+    http://link.com.br/cotacao/USD;EUR
+
+Retorno:
+
+    [
+       {
+          "type":"A",
+          "initials":"USD",
+          "buy":3.1235,
+          "sell":3.1241
+       },
+       {
+          "type":"B",
+          "initials":"EUR",
+          "buy":3.3621,
+          "sell":3.3643
+       }
+    ]
+
+###Os dados obtidos são:
+ - **Tipo** (string)
+ - **Sigla** (string)
+ - **Compra** (float)
+ - **Venda** (float)
 
 ## License
 
