@@ -51,7 +51,7 @@ class CleanCsv extends Command
         $this->info('Cleaning the csv');
 
         $split = preg_split('/\r\n/', $csv);
-        array_pop($split);
+        array_pop($split); // Removed because it's empty
 
         $this->info('Inserting data into Rates table');
 
