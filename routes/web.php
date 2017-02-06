@@ -1,7 +1,7 @@
 <?php
 
 // Api route group
-$app->group(['prefix' => 'cotacao', 'namespace' => 'Api'], function() use ($app) {
+$app->group(['prefix' => 'rate', 'namespace' => 'Api'], function() use ($app) {
 
     $app->get('/', [
         'as' => 'api.index', 'uses' => 'RateController@index'
