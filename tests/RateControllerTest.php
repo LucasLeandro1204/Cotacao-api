@@ -14,5 +14,9 @@ class RateControllerTest extends TestCase
 
         $this->get('cotacao/USD')
             ->seeStatusCode(200);
+
+        $this->get('cotacao/USD;EUR')
+            ->seeStatusCode(200)
+            ->assertJson('{"type": "A", "initials": "USD", "type": "B", "initials": "EUR"}');
     }
 }
