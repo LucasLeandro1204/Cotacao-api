@@ -11,5 +11,8 @@ class RateControllerTest extends TestCase
     {
         $this->get('cotacao')
             ->seeStatusCode(200);
+
+        $this->get('cotacao/USD')
+            ->seeStatusCode(200);
     }
 }
