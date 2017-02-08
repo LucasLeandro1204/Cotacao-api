@@ -17,9 +17,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Return all
-     *
-     * @return response
+     * Index view
      */
     public function index()
     {
