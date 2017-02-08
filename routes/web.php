@@ -1,6 +1,6 @@
 <?php
 
-// Api route group
+// Site route group
 $app->group(['namespace' => 'Site'], function() use ($app) {
 
     $app->get('/', [
@@ -9,6 +9,8 @@ $app->group(['namespace' => 'Site'], function() use ($app) {
 
 });
 
+
+// Api route group
 $app->group(['prefix' => 'cotacao', 'namespace' => 'Api'], function() use ($app) {
 
     $app->get('/', [
