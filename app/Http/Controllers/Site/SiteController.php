@@ -15,4 +15,14 @@ class SiteController extends Controller
     {
 
     }
+
+    /**
+     * Return all
+     *
+     * @return response
+     */
+    public function index()
+    {
+        return 'Index';
+    }
 }
