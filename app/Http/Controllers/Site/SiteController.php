@@ -21,6 +21,6 @@ class SiteController extends Controller
      */
     public function index()
     {
-        return 'Index';
+        return view('index');
     }
 }
