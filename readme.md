@@ -10,12 +10,16 @@ API desenvolvida com o Lumen, usando os dados cedidos pelo Banco Central, atuali
 ### Listar todas as moedas
 Faça um requisição **GET** para
 
-    http://link.com.br/cotacao/
+    http://projetolkz.com.br/cotacao
+
+**URL sujeita a mudanças**
 
 ### Listar uma ou mais moedas
 Faça uma requisição **GET**, especificando as moedas como parâmetro, separadas por **;**.
 
-    http://link.com.br/cotacao/USD;EUR
+    http://projetolkz.com.br/cotacao/USD;EUR
+
+**URL sujeita a mudanças**
 
 Retorno:
 
