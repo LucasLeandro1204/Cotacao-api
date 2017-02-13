@@ -24,6 +24,6 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('csv:clean')->everyMinute();
+        $schedule->command('csv:clean')->twiceDaily(15, 20);
     }
 }
