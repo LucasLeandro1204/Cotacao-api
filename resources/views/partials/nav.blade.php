@@ -1,9 +1,11 @@
-<header id="navbar-top" class="navbar navbar-toggleable fixed-top navbar-inverse">
+<header id="navbar-top" class="navbar navbar-toggleable navbar-inverse">
   <div class="container">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="/">Cotação</a>
+    <a class="navbar-brand" href="/">
+      <img src="images/logo.png">
+    </a>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">

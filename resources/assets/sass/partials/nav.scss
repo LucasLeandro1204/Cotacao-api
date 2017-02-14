@@ -1,4 +1,13 @@
 #navbar-top {
+  width: 100%;
+  position: absolute;
+
+  .navbar-brand {
+
+    img {
+      width: 90px;
+    }
+  }
 
   .nav-item {
 
@@ -23,7 +32,7 @@
           height: 2px;
           width: 0;
           bottom: 0;
-          background-color: rgba(227, 39, 39, 1);
+          background-color: rgba(212, 7, 8, 1);
         }
 
         &:before {
@@ -38,7 +47,6 @@
 
           &:before,
           &:after {
-            animation-direction: reverse;
             width: 50%;
           }
         }
@@ -55,7 +63,43 @@
         border-radius: 5px;
 
         &:hover {
-          background: rgba(227, 39, 39, 0.8);
+          background: rgba(212, 7, 8, .8);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    .container {
+      width: 100%;
+    }
+
+    .navbar-toggler {
+      margin-top: 6px;
+      margin-right: -15px;
+    }
+
+    .nav-item {
+      margin: 5px 0 !important;
+
+      .nav-link {
+        background: none !important;
+        padding: 5px 0 !important;
+        border-radius: 0;
+
+        &:after,
+        &:before {
+          content: '';
+          position: absolute;
+          transition: all 300ms ease-out;
+          height: 2px;
+          width: 50% !important;
+          bottom: 0;
+          background-color: rgba(212, 7, 8, 1);
+        }
+
+        &:after {
+          right: 0;
         }
       }
     }
