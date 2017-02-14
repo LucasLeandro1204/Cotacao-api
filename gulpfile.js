@@ -17,7 +17,7 @@ elixir(function (mix) {
     packageCache: {}
   });
 
-  mix.copy(paths.ass + 'images', paths.pub + 'images');
+  mix.copy('resources/assets/images', 'public/images');
 
   mix.browserSync({
     proxy: 'cotacao-api.dev',
