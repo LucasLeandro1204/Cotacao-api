@@ -13,7 +13,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Commands\CleanCsv::class
+        \App\Console\Commands\CleanCsv::class
     ];
 
     /**
@@ -24,6 +24,6 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('csv:clean')->twiceDaily(15, 20);
+        $schedule->command('csv:clean --force')->hourly();
     }
 }
