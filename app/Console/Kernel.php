@@ -24,6 +24,6 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('csv:clean --force')->hourly();
+        $schedule->command('csv:clean')->hourly();
     }
 }
