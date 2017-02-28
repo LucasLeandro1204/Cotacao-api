@@ -1,21 +1,27 @@
-# API Cotações
+# Cotação API
 
-API desenvolvida com o Lumen, usando os dados cedidos pelo Banco Central, atualizados todo dia útil, exceto feriados.
+Desenvolvida com o Lumen, usando os dados cedidos pelo Banco Central, atualizados todo dia útil, exceto feriados.
 
 ## Lumen PHP Framework
 [Documentação](https://lumen.laravel.com/docs/5.4)
 
 ## Como usar
 
+###Os dados obtidos são:
+ - **Tipo** (string)
+ - **Sigla** (string)
+ - **Compra** (float)
+ - **Venda** (float)
+
 ### Listar todas as moedas
-Faça um requisição **GET** para
+Faça um requisição **GET**
 
     http://projetolkz.com.br/cotacao
 
 **URL sujeita a mudanças**
 
 ### Listar uma ou mais moedas
-Faça uma requisição **GET**, especificando as moedas como parâmetro, separadas por **;**.
+Faça uma requisição **GET**, especificando as moedas como parâmetro, separadas por **;**
 
     http://projetolkz.com.br/cotacao/USD;EUR
 
@@ -37,12 +43,6 @@ Retorno:
           "sell":3.3643
        }
     ]
-
-###Os dados obtidos são:
- - **Tipo** (string)
- - **Sigla** (string)
- - **Compra** (float)
- - **Venda** (float)
 
 ## License
 

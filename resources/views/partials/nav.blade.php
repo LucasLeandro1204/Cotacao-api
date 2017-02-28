@@ -9,9 +9,6 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#" target="_blank">Sobre</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="https://github.com/LucasLeandro1204/cotacao-api/issues" target="_blank">Bugs</a>
         </li>
         <li class="nav-item nav-highlight">

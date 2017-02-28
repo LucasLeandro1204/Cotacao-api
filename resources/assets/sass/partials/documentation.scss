@@ -1,0 +1,16 @@
+section#documentation {
+
+  ul {
+    list-style: none;
+    padding-left: 20px;
+
+    li::before {
+      content: '-';
+      margin-right: 10px;
+    }
+  }
+
+  hr {
+    margin-bottom: 30px;
+  }
+}

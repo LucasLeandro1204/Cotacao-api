@@ -1,2 +1,44 @@
+html, body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.btn-border {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 15px 30px;
+  border-radius: 0;
+
+  &:hover,
+  &:active {
+    color: #fff;
+    background: rgba(150, 150, 150, .2);
+  }
+}
+
+pre {
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid rgb(243, 243, 243);
+  background: rgb(247, 247, 247);
+}
+
+p {
+
+  span {
+    font-weight: 600;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Lato, sans-serif;
+}
+
 @import 'partials/nav.scss';
 @import 'partials/intro.scss';
+@import 'partials/documentation.scss';
+

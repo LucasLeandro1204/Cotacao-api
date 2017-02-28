@@ -23,8 +23,8 @@ elixir((mix) => {
     proxy: 'cotacao-api.dev',
     // proxy: '127.0.0.1:8000',
     files: [
-      paths.pub + '/style/*.css',
-      paths.pub + '/js/*.js',
+      paths.pub + '/styles/*.css',
+      paths.pub + '/scripts/*.js',
       elixir.config.viewPath + '/**/*.php'
     ],
   });
