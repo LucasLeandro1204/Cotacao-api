@@ -25,11 +25,11 @@
       </ul>
       <hr>
       <h4>Listar todas as moedas</h4>
-      <p>Faça um requisição GET para</p>
+      <p>Faça um requisição <span>GET</span></p>
       <pre>http://projetolkz.com.br/cotacao</pre>
       <hr>
       <h4>Listar uma moeda ou mais</h4>
-      <p>Faça uma requisição GET, especificando as moedas como parâmetro, separadas por ;.</p>
+      <p>Faça uma requisição <span>GET</span>, especificando as moedas como parâmetro separadas por <span>;</span></p>
       <pre>http://projetolkz.com.br/cotacao/USD;EUR</pre>
       <p>Retorno</p>
 <pre>
