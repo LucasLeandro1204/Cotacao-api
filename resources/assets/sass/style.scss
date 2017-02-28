@@ -1,2 +1,20 @@
+html, body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.btn-border {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 15px 30px;
+  border-radius: 0;
+
+  &:hover,
+  &:active {
+    color: #fff;
+    background: rgba(255, 255, 255, .2);
+  }
+}
+
 @import 'partials/nav.scss';
 @import 'partials/intro.scss';
+
