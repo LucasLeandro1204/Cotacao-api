@@ -7,15 +7,21 @@ Desenvolvida com o Lumen, usando os dados cedidos pelo Banco Central, atualizado
 
 ## Como usar
 
+###Os dados obtidos são:
+ - **Tipo** (string)
+ - **Sigla** (string)
+ - **Compra** (float)
+ - **Venda** (float)
+
 ### Listar todas as moedas
-Faça um requisição **GET** para
+Faça um requisição **GET**
 
     http://projetolkz.com.br/cotacao
 
 **URL sujeita a mudanças**
 
 ### Listar uma ou mais moedas
-Faça uma requisição **GET**, especificando as moedas como parâmetro, separadas por **;**.
+Faça uma requisição **GET**, especificando as moedas como parâmetro, separadas por **;**
 
     http://projetolkz.com.br/cotacao/USD;EUR
 
@@ -37,12 +43,6 @@ Retorno:
           "sell":3.3643
        }
     ]
-
-###Os dados obtidos são:
- - **Tipo** (string)
- - **Sigla** (string)
- - **Compra** (float)
- - **Venda** (float)
 
 ## License
 
