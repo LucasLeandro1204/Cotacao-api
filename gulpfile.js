@@ -1,16 +1,16 @@
 'use strict';
 
-var gulp = require('gulp'),
-  elixir = require('laravel-elixir');
+const gulp = require('gulp');
+const elixir = require('laravel-elixir');
 
-var paths = {
+const paths = {
   pub: './public/',
   ass: './resources/assets/'
 };
 
-
-elixir(function (mix) {
+elixir((mix) => {
   mix.sass('style.scss', paths.pub + 'styles/style.css');
+
   mix.browserify('script.js', paths.pub + 'scripts/script.js', null, {
     paths: ['./node_modules', paths.ass + 'js'],
     cache: {},
@@ -28,9 +28,8 @@ elixir(function (mix) {
       elixir.config.viewPath + '/**/*.php'
     ],
   });
-
 });
 
-gulp.task('clean', function() {
+gulp.task('clean', () => {
   //
 });
