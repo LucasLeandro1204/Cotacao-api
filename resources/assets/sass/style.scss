@@ -15,6 +15,20 @@ html, body {
   }
 }
 
+pre {
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid rgb(243, 243, 243);
+  background: rgb(247, 247, 247);
+}
+
+p {
+
+  span {
+    font-weight: 600;
+  }
+}
+
 h1,
 h2,
 h3,
