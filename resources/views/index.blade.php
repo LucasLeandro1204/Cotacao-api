@@ -4,7 +4,7 @@
 
 @section('content')
 
-  <section class="intro">
+  <section id="intro">
     <h1>Cotação API</h1>
     <p>Cotação de todas as moedas, usando os dados cedidos pelo Banco Central</p>
     <a href="#" class="btn btn-border">Documentação</a>
