@@ -1,6 +1,6 @@
-# API Cotações
+# Cotação API
 
-API desenvolvida com o Lumen, usando os dados cedidos pelo Banco Central, atualizados todo dia útil, exceto feriados.
+Desenvolvida com o Lumen, usando os dados cedidos pelo Banco Central, atualizados todo dia útil, exceto feriados.
 
 ## Lumen PHP Framework
 [Documentação](https://lumen.laravel.com/docs/5.4)
