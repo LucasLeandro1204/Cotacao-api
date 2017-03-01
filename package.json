@@ -1,6 +1,6 @@
 {
   "name": "Cotacao-Api",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "API desenvolvida com o Lumen, usando os dados cedidos pelo Banco Central, atualizados todo dia útil, exceto feriados.",
   "directories": {
     "test": "tests"
