@@ -3,15 +3,15 @@
 /**
  * Integer to float or reverse
  */
-function format($n, $insert = false)
+function format($number)
 {
-    if ($insert) {
-        $n = str_replace(',', '.', $n);
-        $n = preg_match('/[0-9]+\.[0-9]{4}/', $n, $ns);
+    if (preg_match('/[^\d]/', $number) === 0) {
 
-        return $ns[0] * 10000;
+        return $number / 10000;
     }
+    $clean = explode(',', $number);
 
-    return $n / 10000;
+    return ($clean[0] . substr($clean[1], 0, 4)) * 1;
 }
+
 
